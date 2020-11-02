@@ -1,0 +1,10 @@
+<div class="service-list">
+    <div 
+        *ngFor="let servico of servicos | async"
+        class="service-card">
+        <div class="service-card__status">{{ servico.status }}</div>
+        <img class="service-card__photo" [src]="servico.foto" [alt]="servico.nome"/>
+        <div class="service-card__nome">{{ servico.nome }}</div>
+        <div class="service-card__criadoPor">{{ servico.criadoPor }}</div>
+    </div>
+</div>
